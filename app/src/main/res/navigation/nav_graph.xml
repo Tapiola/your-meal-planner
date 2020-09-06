@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navHostFragment">
+
+    <fragment
+        android:id="@+id/navHostFragment"
+        android:name="com.example.yourmealplanner.view.startup.NavHostFragment"
+        android:label="NavHostFragment" >
+        <action
+            android:id="@+id/action_navHostFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_navHostFragment_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+        <action
+            android:id="@+id/action_navHostFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.yourmealplanner.view.after.MainFragment"
+        android:label="main_view"
+        tools:layout="@layout/main_view" >
+        <action
+            android:id="@+id/action_mainFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.example.yourmealplanner.view.after.RecipesFragment"
+        android:label="recipes_view"
+        tools:layout="@layout/recipes_view" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.yourmealplanner.view.after.RecipeFragment"
+        android:label="RecipeFragment" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.yourmealplanner.view.after.EditProfileFragment"
+        android:label="EditProfileFragment" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

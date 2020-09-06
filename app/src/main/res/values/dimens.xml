@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_width">0dp</dimen>
+    <dimen name="login_height">0dp</dimen>
+    <dimen name="input_width">260dp</dimen>
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="login_width_percentage">0.75</dimen>
+    <dimen name="login_height_percentage">0.07</dimen>
+    <dimen name="login_top_bias">0.3</dimen>
+    <dimen name="login_bot_bias">0.8</dimen>
+</resources>

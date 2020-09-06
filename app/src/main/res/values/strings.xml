@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Your Meal Planner</string>
+    <string name="email_label">Email Address</string>
+    <string name="password_label">Password</string>
+    <string name="SignIn_label">Sign In</string>
+    <string name="remember_label">Remember me</string>
+    <string name="forgot_label">Forgot Password</string>
+    <string name="SignUp_label">Sign Up</string>
+    <string name="recipe_name">Recipe</string>
+    <string name="weight_label">Weight</string>
+    <string name="height_label">Height</string>
+    <string name="age_label">Age</string>
+    <string name="recipe_ingredients">Ingredient\n Ingredient\n Ingredient\n Ingredient\n Ingredient\n Ingredient\n Ingredient</string>
+    <string name="recipe_nutrition">Nutrient\n Nutrient\n Nutrient\n Nutrient\n Ingredient</string>
+    <string name="recipe_preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</string>
+    <string name="meal_type">Meal Type</string>
+    <string name="add">ADD</string>
+    <string name="save">SAVE</string>
+    <string-array name="genders">
+        <item>female</item>
+        <item>male</item>
+    </string-array>
+    <string-array name="intolerances">
+        <item>dairy</item>
+        <item>egg</item>
+        <item>gluten</item>
+        <item>grain</item>
+        <item>peanut</item>
+        <item>seafood</item>
+        <item>sesame</item>
+        <item>shellfish</item>
+        <item>soy</item>
+        <item>sulfite</item>
+        <item>tree nut</item>
+        <item>wheat</item>
+    </string-array>
+    <string-array name="diet">
+        <item>omnivore</item>
+        <item>pescetarian</item>
+        <item>vegetarian</item>
+        <item>vegan</item>
+    </string-array>
+    <string-array name="activity">
+        <item>sedentary</item>
+        <item>lightly active</item>
+        <item>moderately active</item>
+        <item>very active</item>
+        <item>extra active</item>
+    </string-array>
+</resources>

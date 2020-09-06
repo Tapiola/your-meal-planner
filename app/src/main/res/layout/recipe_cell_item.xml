@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+
+        <ImageView
+            android:id="@+id/recipe_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/recipe_name"
+            style="@style/recipeNameStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/recipe_name"
+            app:layout_constraintWidth_max="200dp"
+            app:layout_constraintStart_toEndOf="@+id/recipe_icon"
+            app:layout_constraintTop_toTopOf="@+id/recipe_icon" />
+
+        <TextView
+            android:id="@+id/recipe_preview"
+            style="@style/recipeTextPreviewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:maxLength="100"
+            app:layout_constraintWidth_max="200dp"
+            android:text="@string/recipe_preview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_name"
+            app:layout_constraintStart_toStartOf="@+id/recipe_name" />
+
+        <ToggleButton
+            android:id="@+id/favourite_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/ic_favourite_toggle"
+            app:layout_constraintBottom_toBottomOf="@+id/recipe_preview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recipe_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

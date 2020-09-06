@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.yourmealplanner.viewmodel.UserLoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundLight"
+        tools:context=".view.startup.NavHostFragment">
+
+        <EditText
+            android:id="@+id/email_input"
+            style="@style/StyledTilEditText"
+            android:layout_width="@dimen/login_width"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/email_label"
+            android:inputType="textEmailAddress"
+            android:text="@={viewmodel.email}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="@dimen/login_top_bias"
+            app:layout_constraintWidth_percent="@dimen/login_width_percentage" />
+
+        <EditText
+            android:id="@+id/password_input"
+            style="@style/StyledTilEditText"
+            android:layout_width="@dimen/login_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:hint="@string/password_label"
+            android:inputType="textPassword"
+            android:text="@={viewmodel.password}"
+            app:layout_constraintBottom_toTopOf="@+id/signInButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_input"
+            app:layout_constraintWidth_percent="@dimen/login_width_percentage" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="@dimen/login_width"
+            android:layout_height="@dimen/login_height"
+            android:layout_marginTop="8dp"
+            android:background="@color/backgroundDark"
+            android:text="@string/SignIn_label"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{()->viewmodel.signin()}"
+            app:layout_constraintBottom_toTopOf="@+id/rememberCheckbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="@dimen/login_height_percentage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_input"
+            app:layout_constraintWidth_percent="@dimen/login_width_percentage" />
+
+        <CheckBox
+            android:id="@+id/rememberCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/remember_label"
+            android:textColor="@color/backgroundDark"
+            app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+            app:layout_constraintStart_toStartOf="@+id/signInButton"
+            app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+
+        <TextView
+            android:text="@string/password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/backgroundDark"
+            android:id="@+id/forgotPasswordView"
+            app:layout_constraintEnd_toEndOf="@+id/signInButton"
+            app:layout_constraintTop_toTopOf="@+id/rememberCheckbox"
+            app:layout_constraintBottom_toBottomOf="@+id/rememberCheckbox"/>
+
+        <Button
+            android:text="@string/SignUp_label"
+            android:layout_width="@dimen/login_width"
+            android:layout_height="@dimen/login_height"
+            app:layout_constraintHeight_percent="@dimen/login_height_percentage"
+            app:layout_constraintWidth_percent="@dimen/login_width_percentage"
+            android:id="@+id/signUpButton"
+            android:background="@color/white"
+            android:textColor="@color/backgroundDark"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{()->viewmodel.signup()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="@dimen/login_bot_bias"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
